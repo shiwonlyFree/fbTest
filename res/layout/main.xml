@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    xmlns:blurView="http://schemas.android.com/apk/res-auto"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical"
+              android:background="#303040"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+              tools:context="com.mikw.fbtest.MainActivity" >
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layout_marginTop"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+        
+         <com.facebook.widget.ProfilePictureView
+            android:id="@+id/profile_pic"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            facebook:preset_size="large"
+     
+             />
+</LinearLayout>
+
+      <eu.masconsult.blurview.library.FrameLayoutWithBluredBackground
+         android:id="@+id/blured_layout"
+         android:layout_width="@dimen/blure_size"
+         android:layout_height="@dimen/blure_size"
+         android:layout_marginTop="@dimen/blure_marginTop"
+         android:layout_gravity="top|center"
+         blurView:blurRadius="5"
+         android:background="#00000000" >
+    
+      </eu.masconsult.blurview.library.FrameLayoutWithBluredBackground>
+
+
+    <com.facebook.widget.LoginButton
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/blogin_margin"
+        android:layout_marginTop="@dimen/blogin_margin" />
+    
+           <SeekBar
+             android:id="@+id/radius_slider" 
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:max="25"
+             />
+     
+</FrameLayout>
